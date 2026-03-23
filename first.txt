@@ -1,2 +1,26 @@
 hello all 
 good morning
+package disha_c_19.Disha_c;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.ParseException;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+public class Dii {
+
+	public static void main(String[] args) throws ParseException, IOException, org.json.simple.parser.ParseException {
+		// TODO Auto-generated method stub
+JSONParser jsonparser = new JSONParser();
+FileReader filereader = new FileReader(".\\Diii\\emp.json");
+Object obj = jsonparser.parse(filereader);
+JSONObject empobj = (JSONObject)obj;
+String fn=(String)empobj.get("firstname");
+String ln=(String)empobj.get("lastname");
+System.out.println("firstname:"+fn);
+System.out.println("lastname:"+ln);
+	}
+
+}
